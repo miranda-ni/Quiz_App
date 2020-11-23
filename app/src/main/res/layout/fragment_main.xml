@@ -85,8 +85,6 @@
                 android:valueFrom="1"
                 android:max="20"
                 android:thumbTint="#BE52F2"
-
-
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 

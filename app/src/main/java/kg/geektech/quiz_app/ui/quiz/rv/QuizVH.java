@@ -103,6 +103,18 @@ public class QuizVH extends RecyclerView.ViewHolder {
 
 
     }
+    public void setRedBackground(Button... buttons){
+        for (Button button : buttons){
+            button.setBackgroundResource(R.drawable.button_skip);
+            button.setTextColor(Color.WHITE);
+        }
+    }
+
+    public void setGreenBackground(Button...buttons){
+        for (Button button : buttons){
+            button.setBackgroundResource(R.drawable.background_correct);
+        }
+    }
 
     public void clickByPos() {
         binding.Quiz4.setTextColor(Color.BLACK);
@@ -111,10 +123,11 @@ public class QuizVH extends RecyclerView.ViewHolder {
             switch (binding.getQuiz().getSelectedAnswerPos()) {
                 case 0:
                     if (binding.getQuiz().getCorrectAnswers().equals(binding.getQuiz().getAnswers().get(0))) {
-                        binding.Quiz1.setBackgroundResource(R.drawable.background_correct);
-                        binding.Quiz1.setTextColor(Color.WHITE);
-                        binding.quizYes.setBackgroundResource(R.drawable.background_correct);
-                        binding.quizYes.setTextColor(Color.WHITE);
+//                        binding.Quiz1.setBackgroundResource(R.drawable.background_correct);
+//                        binding.Quiz1.setTextColor(Color.WHITE);
+//                        binding.quizYes.setBackgroundResource(R.drawable.background_correct);
+//                        binding.quizYes.setTextColor(Color.WHITE);
+                        setGreenBackground(binding.Quiz1,binding.quizYes);
                         iListener.isAnsweredTrue(true);
 
 
@@ -122,10 +135,11 @@ public class QuizVH extends RecyclerView.ViewHolder {
 
                     } else {
                         correctAnswerByDefault();
-                        binding.Quiz1.setBackgroundResource(R.drawable.button_skip);
-                        binding.quizYes.setBackgroundResource(R.drawable.button_skip);
-                        binding.quizYes.setTextColor(Color.WHITE);
-                        binding.Quiz1.setTextColor(Color.WHITE);
+//                        binding.Quiz1.setBackgroundResource(R.drawable.button_skip);
+//                        binding.quizYes.setBackgroundResource(R.drawable.button_skip);
+//                        binding.quizYes.setTextColor(Color.WHITE);
+//                        binding.Quiz1.setTextColor(Color.WHITE);
+                        setRedBackground(binding.Quiz1,binding.quizYes);
                         iListener.isAnsweredTrue(false);
 
 
@@ -136,19 +150,21 @@ public class QuizVH extends RecyclerView.ViewHolder {
                 case 1:
 
                     if (binding.getQuiz().getCorrectAnswers().equals(binding.getQuiz().getAnswers().get(1))) {
-                        binding.Quiz2.setBackgroundResource(R.drawable.background_correct);
-                        binding.Quiz2.setBackgroundResource(R.drawable.background_correct);
-                        binding.quizNo.setTextColor(Color.WHITE);
-                        binding.quizNo.setTextColor(Color.WHITE);
+//                        binding.Quiz2.setBackgroundResource(R.drawable.background_correct);
+//                        binding.Quiz2.setBackgroundResource(R.drawable.background_correct);
+//                        binding.quizNo.setTextColor(Color.WHITE);
+//                        binding.quizNo.setTextColor(Color.WHITE);
+                        setGreenBackground(binding.Quiz2,binding.quizNo);
                         iListener.isAnsweredTrue(true);
 
 
                     } else {
                         correctAnswerByDefault();
-                        binding.Quiz2.setBackgroundResource(R.drawable.button_skip);
-                        binding.quizNo.setBackgroundResource(R.drawable.button_skip);
-                        binding.quizNo.setTextColor(Color.WHITE);
-                        binding.Quiz2.setTextColor(Color.WHITE);
+//                        binding.Quiz2.setBackgroundResource(R.drawable.button_skip);
+//                        binding.quizNo.setBackgroundResource(R.drawable.button_skip);
+//                        binding.quizNo.setTextColor(Color.WHITE);
+//                        binding.Quiz2.setTextColor(Color.WHITE);
+                        setRedBackground(binding.Quiz2,binding.quizNo);
                         iListener.isAnsweredTrue(false);
 
                     }
@@ -158,15 +174,17 @@ public class QuizVH extends RecyclerView.ViewHolder {
                 case 2:
 
                     if (binding.getQuiz().getCorrectAnswers().equals(binding.getQuiz().getAnswers().get(2))) {
-                        binding.Quiz3.setBackgroundResource(R.drawable.background_correct);
-                        binding.Quiz3.setTextColor(Color.WHITE);
+//                        binding.Quiz3.setBackgroundResource(R.drawable.background_correct);
+//                        binding.Quiz3.setTextColor(Color.WHITE);
+                        setGreenBackground(binding.Quiz3);
                         iListener.isAnsweredTrue(true);
 
 
                     } else {
                         correctAnswerByDefault();
-                        binding.Quiz3.setBackgroundResource(R.drawable.button_skip);
-                        binding.Quiz3.setTextColor(Color.WHITE);
+//                        binding.Quiz3.setBackgroundResource(R.drawable.button_skip);
+//                        binding.Quiz3.setTextColor(Color.WHITE);
+                        setRedBackground(binding.Quiz3);
                         iListener.isAnsweredTrue(false);
 
 
@@ -174,15 +192,17 @@ public class QuizVH extends RecyclerView.ViewHolder {
                     break;
                 case 3:
                     if (binding.getQuiz().getCorrectAnswers().equals(binding.getQuiz().getAnswers().get(3))) {
-                        binding.Quiz4.setBackgroundResource(R.drawable.background_correct);
-                        binding.Quiz4.setTextColor(Color.WHITE);
+//                        binding.Quiz4.setBackgroundResource(R.drawable.background_correct);
+//                        binding.Quiz4.setTextColor(Color.WHITE);
+                        setGreenBackground(binding.Quiz4);
                         iListener.isAnsweredTrue(true);
 
                     } else {
                         correctAnswerByDefault();
 
-                        binding.Quiz4.setBackgroundResource(R.drawable.button_skip);
-                        binding.Quiz4.setTextColor(Color.WHITE);
+//                        binding.Quiz4.setBackgroundResource(R.drawable.button_skip);
+//                        binding.Quiz4.setTextColor(Color.WHITE);
+                        setRedBackground(binding.Quiz4);
                         iListener.isAnsweredTrue(false);
 
                     }
@@ -197,25 +217,29 @@ public class QuizVH extends RecyclerView.ViewHolder {
 
     void correctAnswerByDefault() {
         if (binding.getQuiz().getCorrectAnswers().equals(binding.getQuiz().getAnswers().get(0))) {
-            binding.Quiz1.setBackgroundResource(R.drawable.background_correct);
-            binding.quizYes.setBackgroundResource(R.drawable.background_correct);
-            binding.Quiz1.setTextColor(Color.WHITE);
-            binding.quizYes.setTextColor(Color.WHITE);
+//            binding.Quiz1.setBackgroundResource(R.drawable.background_correct);
+//            binding.quizYes.setBackgroundResource(R.drawable.background_correct);
+//            binding.Quiz1.setTextColor(Color.WHITE);
+//            binding.quizYes.setTextColor(Color.WHITE);
+            setGreenBackground(binding.Quiz1,binding.quizYes);
         } else if
         (binding.getQuiz().getCorrectAnswers().equals(binding.getQuiz().getAnswers().get(1))) {
-            binding.Quiz2.setBackgroundResource(R.drawable.background_correct);
-            binding.Quiz2.setTextColor(Color.WHITE);
-            binding.quizNo.setBackgroundResource(R.drawable.background_correct);
-            binding.quizNo.setTextColor(Color.WHITE);
+//            binding.Quiz2.setBackgroundResource(R.drawable.background_correct);
+//            binding.Quiz2.setTextColor(Color.WHITE);
+//            binding.quizNo.setBackgroundResource(R.drawable.background_correct);
+//            binding.quizNo.setTextColor(Color.WHITE);
+            setGreenBackground(binding.Quiz2,binding.quizNo);
         } else if
         (binding.getQuiz().getCorrectAnswers().equals(binding.getQuiz().getAnswers().get(2))) {
-            binding.Quiz3.setBackgroundResource(R.drawable.background_correct);
-            binding.Quiz3.setTextColor(Color.WHITE);
+//            binding.Quiz3.setBackgroundResource(R.drawable.background_correct);
+//            binding.Quiz3.setTextColor(Color.WHITE);
+            setGreenBackground(binding.Quiz3);
         }
         else if
         (binding.getQuiz().getCorrectAnswers().equals(binding.getQuiz().getAnswers().get(3)))
-            binding.Quiz4.setBackgroundResource(R.drawable.background_correct);
-        binding.Quiz4.setTextColor(Color.WHITE);
+//            binding.Quiz4.setBackgroundResource(R.drawable.background_correct);
+//        binding.Quiz4.setTextColor(Color.WHITE);
+            setGreenBackground(binding.Quiz4);
     }
 
 
