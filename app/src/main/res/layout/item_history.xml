@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+    
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        style="@style/historyCards"
+        android:layout_marginTop="10dp"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/textInBoldStyleForCards"
+                android:text="@string/category" />
+
+            <TextView
+                android:id="@+id/history_category"
+                style="@style/textInBoldStyleForCards"
+                android:text="@string/mixed" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="200dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/textStyleForCards"
+                android:text="@string/correct_answers" />
+
+            <TextView
+                android:id="@+id/history_correctAnswers"
+                style="@style/textStyleForCards"
+                android:text="@string/_8_10" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/textStyleForCards"
+                android:text="@string/typeOfDif" />
+
+            <TextView
+                android:id="@+id/history_diff"
+                style="@style/textStyleForCards"
+                android:text="@string/easy" />
+
+            <TextView
+                android:id="@+id/history_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_gravity="center"
+                android:text="@string/datetime"
+                android:textStyle="bold"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

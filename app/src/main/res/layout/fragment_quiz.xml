@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="quizViewModel"
+            type="kg.geektech.quiz_app.ui.quiz.QuizViewModel" />
+        <variable
+            name="onAnswerClick"
+            type="kg.geektech.quiz_app.utils.IListener" />
+    </data>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.main.MainFragment">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_back"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"/>
+
+
+        <TextView
+            android:layout_marginTop="40dp"
+            android:id="@+id/quiz_category"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginStart="20dp"
+            android:text="@string/category"
+            android:textColor="#1A051D"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="40dp" />
+
+        <ProgressBar
+            android:id="@+id/quiz_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="180dp"
+            android:layout_height="5dp"
+            app:layout_constraintTop_toTopOf="@+id/quiz_category"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/background_progress_bar" />
+
+        <TextView
+            app:layout_constraintTop_toTopOf="@+id/quiz_progress"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="10dp"
+            android:id="@+id/quiz_question_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:textColor="@color/colorBlack" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/quiz_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_marginTop="80dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toTopOf="@id/quiz_question_amount"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/quiz_progress"
+            tools:listitem="@layout/item_quiz"
+            />
+        <Button
+            android:id="@+id/quiz_skip"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:background="@drawable/button_skip"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:text="@string/skip"
+            android:layout_marginBottom="70dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+        <ProgressBar
+            android:id="@+id/progressBar"
+            app:layout_constraintTop_toTopOf="parent"
+            android:outlineAmbientShadowColor="@color/colorForSkip"
+            android:outlineSpotShadowColor="@color/colorForSkip"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Quiz_App</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="questions_amount">amount</string>
+    <string name="_10">10</string>
+    <string name="category">category:</string>
+    <string name="correct">Correct answers:</string>
+    <string name="start">start</string>
+    <string name="question">question</string>
+    <string name="currentPos">curPos</string>
+    <string name="skip">skip</string>
+    <string name="category2">cat</string>
+    <string name="mixed">mixed</string>
+    <string name="correct_answers">Correct answers :</string>
+    <string name="_8_10">amount from cor</string>
+    <string name="typeOfDif">type of diff</string>
+    <string name="easy">selected from diff</string>
+    <string name="datetime">date</string>
+    <string name="share_this_app">share this app</string>
+    <string name="rate_us">rate us</string>
+    <string name="leave_feedback">leave feed</string>
+    <string name="clear_history">clear history</string>
+    <string name="version">version</string>
+    <string name="difficulty">Difficulty :</string>
+    <string name="result">Result :</string>
+    <string name="finish">Finish</string>
+
+
+    <string-array name="difficulty">
+        <item>easy</item>
+        <item>medium</item>
+        <item>hard</item>
+
+
+    </string-array>
+</resources>
