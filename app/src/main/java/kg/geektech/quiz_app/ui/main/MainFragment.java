@@ -149,7 +149,7 @@ public class MainFragment extends Fragment {
             QuizQuestionFragment fragment = new QuizQuestionFragment();
             Bundle result = new Bundle();
             result.putInt(EXTRA_AMOUNT, seekBarPos);
-            result.putInt(EXTRA_CATEGORY_POS, pos);
+            result.putInt(EXTRA_CATEGORY_POS, category);
             result.putString(EXTRA_CATEGORY, categoryName);
             Log.e("ololo", "result. putString: " + categoryName);
             result.putString(EXTRA_DIFFICULTY, valueOfDiffSpin);
