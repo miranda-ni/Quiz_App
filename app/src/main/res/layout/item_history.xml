@@ -28,6 +28,15 @@
                 style="@style/textInBoldStyleForCards"
                 android:text="@string/mixed" />
 
+            <ImageView
+                android:id="@+id/delete_history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="150dp"
+                android:layout_marginLeft="150dp"
+                android:src="@drawable/ic_baseline_delete_24"
+                android:layout_marginTop="10dp"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -76,6 +85,7 @@
 
         </LinearLayout>
     </LinearLayout>
+
 
 
 

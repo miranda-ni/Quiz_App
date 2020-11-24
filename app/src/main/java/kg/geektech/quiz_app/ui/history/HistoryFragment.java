@@ -66,4 +66,5 @@ public class HistoryFragment extends Fragment {
         mViewModel.resultMutableLiveData.observe(requireActivity(), results -> historyAdapter.addData(results));
         super.onResume();
     }
+
 }

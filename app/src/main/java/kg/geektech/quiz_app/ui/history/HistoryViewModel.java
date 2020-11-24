@@ -20,4 +20,8 @@ public class HistoryViewModel extends ViewModel {
         Log.d("App.repo", "history view model get result: "+ App.repository.getAll());
 
     }
-}
+
+        void clearHistory(){
+            App.repository.deleteAll();
+        }
+    }

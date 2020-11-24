@@ -155,6 +155,7 @@
             android:background="@drawable/background_correct"
             android:text="@string/finish"
             android:textStyle="bold"
+            android:textColor="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent" />

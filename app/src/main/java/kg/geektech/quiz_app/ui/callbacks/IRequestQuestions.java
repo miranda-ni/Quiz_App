@@ -10,9 +10,8 @@ public interface IRequestQuestions {
                       QuestionCallback callback);
 
 
-
-
     interface  QuestionCallback extends ICoreCallBack<List<Quiz>> {
+
         @Override
         void onSuccess(List<Quiz> quiz);
 
